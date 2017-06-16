@@ -149,17 +149,21 @@ h3 {
 }
 .showcase {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 75%;
 }
 .project {
+  height: 200px;
+  width: 200px;
   position: relative;
   overflow: hidden;
-  margin: 0;
   margin-top: 15px;
 }
   .project img{
   height: 200px;
-  width: 100%;
+  width: 200px;
   border: 1px solid black;
   background: rgba(0,0,0,0.8);
 }
@@ -268,8 +272,9 @@ footer p {
     top: -35px;
     border: none;
   }
-  .project img {
+  .showcase {
     width: 50%;
+    align-items: flex-start;
   }
 }
 
@@ -279,6 +284,6 @@ footer p {
     margin: 30px auto;
   }
   .showcase {
-    justify-content: center;
+
   }
 }
