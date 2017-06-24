@@ -42,39 +42,51 @@ nav {
 .logo {
   height: 55px;
 }
+.nav-wrap {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position:fixed;
+  overflow: hidden;
+  background: rgba(0,0,0,0.9);
+  transition: all 0.5s ease;
+}
+.nav-close {
+  position: absolute;
+  top: 15%;
+  right: 20%;
+  font-size: 100px;
+  color: white;
+}
 nav ul {
+  position: relative;
+  top: 25%;
   list-style-type: none;
-  color: #fff;
-  margin-top: 50px;
+  margin-top: 30px;
+  width: 100%;
 }
 nav ul li {
-  display: none;
-  margin: 0px;
-  margin-right: 20px;
-  width: 100%;
-  border-bottom: 1px solid #fff;
+  display: block;
+  margin: 2em auto;
 }
 nav ul li a {
   text-decoration: none;
-  font-size: 1.25em;
-  color: #fff;
+  font-size: 3em;
+  color: #818181;
   &:hover {
-    text-decoration: none;
-    width: 100%;
+    color: white;
   }
 }
 .hamburger {
   display: block;
   margin-right: 45px;
-  margin-top: 5px;
-  height: 50px;
-  width: 50px;
-  border: 5px solid blue;
+  margin-top: 10px;
 }
-.hamburger span {
-  height: 0px;
+.hamburger img{
+  height: 30px;
   width: 30px;
-  border-top: 3px solid white;
+  background: white;
+  border-radius: 5px;
 }
 header {
   position: relative;
@@ -116,20 +128,18 @@ h1 {
   font-size: 1.25em;
   line-height: 2;
 }
-.btn-circle {
+.arrow {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   display: block;
-  position: relative;
-  top: 40%;
-  border: 3px solid white;
+  padding: 0.5em 1em;
+  border: 5px solid white;
   border-radius: 50%;
-  height: 5em;
-  width: 5em;
-  margin: 0 auto;
+  color: #fff;
 }
 .fa-angle-double-down {
-  color: #fff;
-  height: 3em;
-  width: 3em;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   &:hover {
@@ -139,8 +149,8 @@ h1 {
   }
 }
 #work {
-  background: url("https://wallpaperscraft.com/image/dark_background_line_surface_65896_602x339.jpg");
-  color: #fff;
+  background: #F0FFF0;
+  color: #333;
   width: 100%;
   overflow: hidden;
 }
@@ -187,6 +197,27 @@ h3 {
   color: #fff;
   padding: 10px 20px;
 }
+.skills {
+  display: inline-block;
+  margin: 0 auto;
+}
+.learned {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+.learning{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+.skills img {
+  height: 75px;
+  width: 30%;
+  margin: 1em auto;
+}
 #contact {
   margin: 50px;
 }
@@ -231,8 +262,12 @@ h3 {
   padding: 25px;
   background: #fff;
 }
-.modal-content h3 {
-
+.modal-close {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  font-size: 100px;
+  color: white;
 }
 .submit-button {
   @extend .contact-button;
@@ -252,38 +287,54 @@ footer p {
   padding-top: 10px;
   text-align: center;
 }
+.social-media {
+  text-align: center;
+}
 .social-media a{
   margin: 0 auto;
   padding: 10px;
+  text-decoration: none;
   color: #fff;
   &:hover {
-    text-decoration: none;
     color: #41579c;
   }
 }
 
-@media (min-width: 526px) {
+@media (min-width: 40em) {
   .hamburger {
     display: none;
   }
-  nav ul li {
-    display: inline;
-    position: relative;
-    top: -35px;
+  .nav-wrap{
+    display: flex;
+    position: absolute;
+    background: transparent;
     border: none;
+    color: #fff;
+  }
+  .nav-close {
+    display: none;
   }
   .showcase {
     width: 50%;
     align-items: flex-start;
   }
+  .learned {
+    width: 50%;
+  }
+  .learning {
+    width: 50%;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 50em) {
   #contact h3 {
     width: 50%;
     margin: 30px auto;
   }
-  .showcase {
-
+  .learned img{
+    width: 20%;
+  }
+  .learning img {
+    width: 20%;
   }
 }

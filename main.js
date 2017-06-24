@@ -1,8 +1,8 @@
 $(document).ready(function(){
   //Nav color change on scroll
    $(window).scroll(function(){
-    
-    if ($(document).scrollTop() >20) {
+
+    if ($(document).scrollTop() > 20) {
       $("nav").css({"background-color":"#191919"});
     } else {
       $("nav").css({"background": "transparent"})
@@ -11,20 +11,22 @@ $(document).ready(function(){
   // mobile dropdown nav
   //$("nav li").hide();
   $(".hamburger").click(function(){
-    $("nav").toggleClass("active");
-    $("nav li").slideToggle(300);
-  })
+    $(".nav-wrap").slideDown();
+  });
+  $(".nav-close, li, a").click(function(){
+    $(".nav-wrap").slideUp();
+  });
   //smooth scroll
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
-    
+
     // On-page links
     if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
       location.hostname == this.hostname
     ) {
       // Figure out element to scroll to
