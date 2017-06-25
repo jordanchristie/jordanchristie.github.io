@@ -12,7 +12,7 @@
 * {
   outline: none;
 }
-html {
+html{
   margin: 0;
   padding: 0;
   height: 100%;
@@ -49,10 +49,11 @@ nav {
   position:fixed;
   overflow: hidden;
   background: rgba(0,0,0,0.9);
-  transition: all 0.5s ease;
+  //transition: all 0.5s ease;
 }
 .nav-close {
   position: absolute;
+  display: none;
   top: 15%;
   right: 20%;
   font-size: 100px;
@@ -80,13 +81,10 @@ nav ul li a {
 .hamburger {
   display: block;
   margin-right: 45px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
-.hamburger img{
-  height: 30px;
-  width: 30px;
-  background: white;
-  border-radius: 5px;
+.hamburger i{
+  color: #fff;
 }
 header {
   position: relative;
@@ -119,6 +117,26 @@ header {
 .profile-caption span {
   font-weight: 700;
 }
+.arrow {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+  height: 5em;
+  width: 5em;
+  color: #fff;
+}
+.fa-arrow-circle-down {
+  margin: 0 auto;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  &:hover {
+    margin-top: 10px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+}
 h1 {
   @include section-heading;
   text-align: center;
@@ -127,26 +145,7 @@ h1 {
   padding: 20px;
   font-size: 1.25em;
   line-height: 2;
-}
-.arrow {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  display: block;
-  padding: 0.5em 1em;
-  border: 5px solid white;
-  border-radius: 50%;
-  color: #fff;
-}
-.fa-angle-double-down {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  &:hover {
-    margin-top: 10px;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-  }
+  margin: 0 auto;
 }
 #work {
   background: #F0FFF0;
@@ -170,11 +169,12 @@ h3 {
   position: relative;
   overflow: hidden;
   margin-top: 15px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
 }
   .project img{
   height: 200px;
   width: 200px;
-  border: 1px solid black;
+  border-radius: 5px;
   background: rgba(0,0,0,0.8);
 }
 .project:hover .overlay {
@@ -306,23 +306,51 @@ footer p {
   }
   .nav-wrap{
     display: flex;
-    position: absolute;
+    position: fixed;
+    top: 0px;
+    right: 0;
     background: transparent;
+    overflow: auto;
     border: none;
     color: #fff;
   }
-  .nav-close {
+  .nav-wrap i {
     display: none;
   }
-  .showcase {
-    width: 50%;
-    align-items: flex-start;
+  nav ul {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: -15px;
+    width: auto;
+  }
+  nav ul li {
+    margin-right: 2.5em;
+  }
+  nav ul li a {
+    display: flex;
+    font-size: 1.5em;
+    color: #fff;
+  }
+  .project {
+    height: 250px;
+    width: 250px;
+  }
+  .project img {
+    height: 250px;
+    width: 250px;
   }
   .learned {
     width: 50%;
   }
   .learning {
     width: 50%;
+  }
+}
+@media (min-width: 45em) {
+  .about-caption {
+    width: 70%;
   }
 }
 

@@ -9,12 +9,11 @@ $(document).ready(function(){
     };
   })
   // mobile dropdown nav
-  //$("nav li").hide();
   $(".hamburger").click(function(){
     $(".nav-wrap").slideDown();
   });
   $(".nav-close, li, a").click(function(){
-    $(".nav-wrap").slideUp();
+      $(".nav-wrap").slideUp();
   });
   //smooth scroll
   $('a[href*="#"]')
