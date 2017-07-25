@@ -10,10 +10,10 @@ $(document).ready(function(){
   })
   // mobile dropdown nav
   $(".hamburger").click(function(){
-    $(".nav-wrap").slideDown();
+    $(".mobile-nav").show(500);
   });
   $(".nav-close, li, a").click(function(){
-      $(".nav-wrap").slideUp();
+      $(".mobile-nav").css({"display":"none"});
   });
   //smooth scroll
   $('a[href*="#"]')
