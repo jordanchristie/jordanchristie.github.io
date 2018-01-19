@@ -32,6 +32,6 @@ gulp.task('watch', () => {
     gulp.watch('src/assets/*', ['images'])
     gulp.watch('src/*.js', ['minifyJS'])
     gulp.watch('src/*.scss', ['compileCSS'])
-})
+});
 
 gulp.task('default', ['watch'])
