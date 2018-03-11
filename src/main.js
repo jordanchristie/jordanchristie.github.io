@@ -3,7 +3,7 @@ $(document).ready(function(){
    $(window).scroll(function(){
 
     if ($(document).scrollTop() > 20) {
-      $("nav").css({"background-color":"#191919"});
+      $("nav").addClass('active');
     } else {
       $("nav").css({"background": "transparent"})
     };
@@ -21,7 +21,6 @@ $(document).ready(function(){
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
-
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
