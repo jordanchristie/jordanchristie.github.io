@@ -8,7 +8,8 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  font-family: "Roboto"; }
+  font-family: "Roboto";
+  box-sizing: border-box; }
 
 nav {
   z-index: 3;
@@ -27,6 +28,8 @@ nav {
   transition: background .5s linear; }
   nav.active {
     background: #191919; }
+  nav.active ul li {
+    color: #fff; }
 
 .logo {
   height: 55px; }
@@ -199,23 +202,16 @@ form input, textarea {
   width: 60%;
   border: none;
   border-bottom: 1px solid black;
-  background: transparent; }
+  background: transparent;
+  transition: all .3s ease; }
   form input:focus, textarea:focus {
-    border-bottom: 2px solid #457fca; }
+    border-bottom: 2px solid #457fca;
+    transition: all .3s ease; }
 
 .submit-button {
   -webkit-box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
   margin-top: 30px; }
-
-.right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
 
 footer {
   height: 100%;
@@ -224,7 +220,8 @@ footer {
 footer p {
   color: #fff;
   padding-top: 10px;
-  text-align: center; }
+  text-align: center;
+  background: red; }
 
 .social-media {
   text-align: center; }
@@ -233,9 +230,12 @@ footer p {
   margin: 0 auto;
   padding: 10px;
   text-decoration: none;
-  color: #fff; }
+  color: #fff;
+  transition: all 0.3s ease; }
   .social-media a:hover {
-    color: #41579c; }
+    transition: all 0.3s ease;
+    color: #41579c;
+    transform: scale(1.2); }
 
 @media (min-width: 40em) {
   body {

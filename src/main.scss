@@ -31,8 +31,7 @@ body{
   width: 100%;
   overflow-x: hidden;
   font-family: "Roboto";
-  // -webkit-box-sizing: border-box;
-  //         box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 nav {
@@ -52,6 +51,9 @@ nav {
   transition: background .5s linear;
   &.active {
     background: #191919;
+  }
+  &.active ul li {
+    color: #fff;
   }
 }
 
@@ -251,8 +253,10 @@ form input,textarea {
   border: none;
   border-bottom: 1px solid black;
   background: transparent;
+  transition: all .3s ease;
   &:focus {
     border-bottom: 2px solid #457fca;
+    transition: all .3s ease;
   }
 }
 
@@ -261,17 +265,6 @@ form input,textarea {
   -webkit-box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.2);
           box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.2);
   margin-top: 30px;
-}
-
-
-.right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 footer {
@@ -283,17 +276,23 @@ footer p {
   color: #fff;
   padding-top: 10px;
   text-align: center;
+  background: red;
 }
+
 .social-media {
   text-align: center;
 }
+
 .social-media a{
   margin: 0 auto;
   padding: 10px;
   text-decoration: none;
   color: #fff;
+  transition: all 0.3s ease;
   &:hover {
+    transition: all 0.3s ease;
     color: #41579c;
+    transform: scale(1.2);
   }
 }
 
@@ -302,6 +301,7 @@ footer p {
     display: inline-grid;
     grid-template-columns: [sidebar] 30% [main] 70%;
   }
+
   .left {
     grid-area: sidebar;
     position: fixed;
@@ -314,10 +314,11 @@ footer p {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%); 
             clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
   }
+  
   .right {
     grid-area: main;
     background: red;
-    color: #fff;
+    color: #fff;         
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -329,14 +330,17 @@ footer p {
   .hamburger {
     display: none;
   }
+
   .nav-wrap{
     display: none;
   }
+
   .big-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+
   .big-nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -348,9 +352,11 @@ footer p {
     list-style-type: none;
     width: auto;
   }
+
   .big-nav ul li {
     margin-right: 2.5em;
   }
+
   .big-nav ul li a {
     display: -webkit-box;
     display: -ms-flexbox;

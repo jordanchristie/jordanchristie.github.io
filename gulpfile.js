@@ -2,9 +2,10 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')
 const browserSync = require('browser-sync');
 const imagemin = require('gulp-imagemin');
-const uglify = require('gulp-uglify');
 
-gulp.task('copy-html', () => {
+
+
+gulp.task('copyHTML', () => {
     gulp.src('src/*.html')
         .pipe(gulp.dest('dist'))
 });
@@ -15,10 +16,9 @@ gulp.task('images', () => {
         .pipe(gulp.dest('dist/assets/images'))
 });
 
-gulp.task('minifyJS', () => {
+gulp.task('copyJS', () => {
     gulp.src('src/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('dist'))
 });
 
 gulp.task('compileCSS', () => {
@@ -27,13 +27,13 @@ gulp.task('compileCSS', () => {
         .pipe(gulp.dest('dist/'))
 });
 
-gulp.task('run', ['copy-html', 'images', 'minifyJS', 'compileCSS']);
+gulp.task('run', ['copyHTML', 'images', 'copyJS', 'compileCSS']);
 
 gulp.task('watch', () => {
-    gulp.watch('src/*.html', ['copy-html'])
+    gulp.watch('src/*.html', ['copyHTML'])
     gulp.watch('src/assets/images/*', ['images'])
-    gulp.watch('src/*.js', ['minifyJS'])
+    gulp.watch('src.*js', ['copyJS'])
     gulp.watch('src/*.scss', ['compileCSS'])
-})
+});
 
 gulp.task('default', ['run','watch'])
