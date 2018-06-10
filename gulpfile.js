@@ -1,8 +1,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')
-const browserSync = require('browser-sync');
-const imagemin = require('gulp-imagemin');
 
+const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
 
 
 gulp.task('copyHTML', () => {

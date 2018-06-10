@@ -1,5 +1,6 @@
 * {
   outline: none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -9,6 +10,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-family: "Roboto";
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 nav {
@@ -28,7 +30,7 @@ nav {
   transition: background .5s linear; }
   nav.active {
     background: #191919; }
-  nav.active ul li {
+  nav.active ul li a {
     color: #fff; }
 
 .logo {
@@ -40,9 +42,7 @@ nav {
   display: none;
   position: fixed;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.9);
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease; }
+  background: rgba(0, 0, 0, 0.9); }
 
 .nav-close {
   position: absolute;
@@ -84,7 +84,12 @@ nav {
   display: none; }
 
 header {
-  color: #fff; }
+  color: #fff;
+  background: #457fca;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left bottom, left top, from(#457fca), to(#5691c8));
+  background: linear-gradient(to top, #457fca, #5691c8); }
 
 #header-content {
   display: -webkit-box;
@@ -144,23 +149,26 @@ h3 {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   -ms-flex-pack: distribute;
+  -webkit-box-pack: center;
   justify-content: center; }
 
 .project {
   height: auto;
   width: 90%;
   margin: 1em auto;
+  -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.5); }
 
 .project img {
   height: 250px;
   width: 100%;
-  border-radius: 5px; }
+  border-radius: 5px;
+  transition: all 1s ease; }
   .project img:hover {
-    -webkit-filter: grayscale(100);
-    filter: grayscale(100);
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out; }
+    -webkit-filter: saturate(100);
+    filter: saturate(100);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease; }
 
 .project-caption {
   text-align: center; }
@@ -187,6 +195,8 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -199,13 +209,15 @@ h3 {
   background: transparent; }
 
 form input, textarea {
-  width: 60%;
+  width: 80%;
   border: none;
   border-bottom: 1px solid black;
   background: transparent;
+  -webkit-transition: all .3s ease;
   transition: all .3s ease; }
   form input:focus, textarea:focus {
     border-bottom: 2px solid #457fca;
+    -webkit-transition: all .3s ease;
     transition: all .3s ease; }
 
 .submit-button {
@@ -231,10 +243,13 @@ footer p {
   padding: 10px;
   text-decoration: none;
   color: #fff;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
   .social-media a:hover {
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     color: #41579c;
+    -webkit-transform: scale(1.2);
     transform: scale(1.2); }
 
 @media (min-width: 40em) {
@@ -295,6 +310,7 @@ footer p {
   .about-caption {
     margin: 3em; }
   .showcase {
+    -ms-flex-pack: distribute;
     justify-content: space-around; }
   .project {
     width: 40%; }

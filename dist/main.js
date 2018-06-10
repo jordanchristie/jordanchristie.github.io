@@ -3,9 +3,9 @@ $(document).ready(function(){
    $(window).scroll(function(){
 
     if ($(document).scrollTop() > 20) {
-      $("nav").css({"background-color":"#191919"});
+      $("nav").addClass('active');
     } else {
-      $("nav").css({"background": "transparent"})
+      $("nav").removeClass('active');
     };
   })
   // mobile dropdown nav
@@ -13,7 +13,7 @@ $(document).ready(function(){
     $(".mobile-nav").show(500);
   });
   $(".nav-close, li, a").click(function(){
-      $(".mobile-nav").css({"display":"none"});
+      $(".mobile-nav").css({"display":"none"}, 500);
   });
   //smooth scroll
   $('a[href*="#"]')

@@ -21,7 +21,8 @@
 
 * {
   outline: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body{
@@ -31,7 +32,8 @@ body{
   width: 100%;
   overflow-x: hidden;
   font-family: "Roboto";
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 nav {
@@ -52,7 +54,7 @@ nav {
   &.active {
     background: #191919;
   }
-  &.active ul li {
+  &.active ul li a {
     color: #fff;
   }
 }
@@ -68,8 +70,6 @@ nav {
   position:fixed;
   overflow: hidden;
   background: rgba(0,0,0,0.9);
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
 }
 
 .nav-close {
@@ -121,6 +121,9 @@ nav {
 
 header {
   color: #fff;
+  background: #457fca; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left bottom, left top, from(#457fca), to(#5691c8));
+    background: linear-gradient(to top, #457fca, #5691c8); 
 }
 
 #header-content {
@@ -185,13 +188,15 @@ h3 {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -ms-flex-pack: distribute;
-      justify-content: center;
+      -webkit-box-pack: center;
+          justify-content: center;
 }
 .project {
   height: auto;
   width: 90%;
   margin: 1em auto;
-  box-shadow: 0 3px 20px 0 rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 3px 20px 0 rgba(0,0,0,0.5);
+          box-shadow: 0 3px 20px 0 rgba(0,0,0,0.5);
 }
 
 
@@ -199,11 +204,12 @@ h3 {
   height: 250px;
   width: 100%;
   border-radius: 5px;
+  transition: all 1s ease;
   &:hover {
-    -webkit-filter: grayscale(100);
-            filter: grayscale(100);
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-filter: saturate(100);
+            filter: saturate(100);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
   }
 }
 
@@ -236,7 +242,9 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -249,13 +257,15 @@ h3 {
 }
 
 form input,textarea {
-  width: 60%;
+  width: 80%;
   border: none;
   border-bottom: 1px solid black;
   background: transparent;
+  -webkit-transition: all .3s ease;
   transition: all .3s ease;
   &:focus {
     border-bottom: 2px solid #457fca;
+    -webkit-transition: all .3s ease;
     transition: all .3s ease;
   }
 }
@@ -288,11 +298,14 @@ footer p {
   padding: 10px;
   text-decoration: none;
   color: #fff;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   &:hover {
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     color: #41579c;
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
@@ -371,7 +384,8 @@ footer p {
   }
 
   .showcase {
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   
   .project {
