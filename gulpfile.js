@@ -7,24 +7,24 @@ const uglify = require('gulp-uglify');
 
 gulp.task('copyHTML', () => {
     gulp.src('src/*.html')
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('./'))
 });
 
 gulp.task('images', () => {
     gulp.src('src/assets/images/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/assets/images'))
+        .pipe(gulp.dest('assets/images'))
 });
 
 gulp.task('copyJS', () => {
     gulp.src('src/*.js')
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('./'))
 });
 
 gulp.task('compileCSS', () => {
     gulp.src('src/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('./'))
 });
 
 gulp.task('run', ['copyHTML', 'images', 'copyJS', 'compileCSS']);
