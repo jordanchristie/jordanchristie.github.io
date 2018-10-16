@@ -1,20 +1,4 @@
 $(document).ready(function(){
-  //Nav color change on scroll
-   $(window).scroll(function(){
-
-    if ($(document).scrollTop() > 20) {
-      $("nav").addClass('active');
-    } else {
-      $("nav").removeClass('active');
-    };
-  })
-  // mobile dropdown nav
-  $(".hamburger").click(function(){
-    $(".mobile-nav").show(300);
-  });
-  $(".nav-close, li, a").click(function(){
-      $(".mobile-nav").css({"display":"none"}, 300);
-  });
   //smooth scroll
   $('a[href*="#"]')
   // Remove links that don't actually link to anything

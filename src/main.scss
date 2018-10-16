@@ -1,3 +1,4 @@
+// GLOBAL STYLES
 @mixin centered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,6 +38,17 @@ body{
           box-sizing: border-box;
 }
 
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+// SPECIFIC STYLES
 nav {
   z-index: 3;
   display: -webkit-box;
@@ -64,60 +76,20 @@ nav {
   height: 55px;
 }
 
-.mobile-nav {
-  height: 100%;
-  width: 100%;
-  display: none;
-  position:fixed;
-  overflow: hidden;
-  background: rgba(0,0,0,0.9);
-}
-
-.nav-close {
-  position: absolute;
-  display: none;
-  top: 15%;
-  right: 20%;
-  font-size: 100px;
-  color: white;
-}
-
-.mobile-nav ul {
-  position: relative;
-  top: 25%;
-  list-style-type: none;
-  margin-top: 30px;
-  width: 100%;
-}
-
-.mobile-nav ul li {
-  display: block;
-  margin: 2em auto;
-}
-
-.mobile-nav ul li a {
-  text-decoration: none;
-  font-size: 3em;
-  color: #fff !important;
-  &:hover {
-    color: #818181 !important;
-  }
-}
-
-.hamburger {
-  display: block;
-  height: 3em;
-  width: 3em;
-  margin-right: 35px;
-  margin-top: 10px;
-}
-
-.hamburger i{
+nav ul {
+  position: fixed;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  color: black;
+  margin: 0;
+  height: 4em;
+  background: #191919;
   color: #fff;
-}
-
-.big-nav {
-  display: none;
 }
 
 header {
@@ -346,41 +318,36 @@ footer p {
         -ms-flex-flow: column;
             flex-flow: column;
   }
-  .hamburger {
-    display: none;
-  }
 
-  .nav-wrap{
-    display: none;
-  }
-
-  .big-nav {
+  nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .big-nav ul {
+  nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: absolute;
+    justify-content: flex-end;
+    border: 1px solid purple;
     top: 0;
     right: 0;
     margin: 15px auto;
     list-style-type: none;
-    width: auto;
+    width: 30%;
   }
 
-  .big-nav ul li {
+   nav ul li {
     margin-right: 2.5em;
   }
 
-  .big-nav ul li a {
+   nav ul li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    text-decoration: none;
+    width: auto;
     font-size: 1.5em;
     color: #333;
   }

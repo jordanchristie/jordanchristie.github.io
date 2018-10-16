@@ -31,7 +31,7 @@ gulp.task('run', ['copyHTML', 'images', 'copyJS', 'compileCSS']);
 gulp.task('watch', () => {
     gulp.watch('src/*.html', ['copyHTML'])
     gulp.watch('src/assets/images/*', ['images'])
-    gulp.watch('src.*js', ['copyJS'])
+    gulp.watch('src/*.js', ['copyJS'])
     gulp.watch('src/*.scss', ['compileCSS'])
 });
 
