@@ -10,10 +10,10 @@ $(document).ready(function(){
   })
   // mobile dropdown nav
   $(".hamburger").click(function(){
-    $(".mobile-nav").show(500);
+    $(".mobile-nav").show(300);
   });
   $(".nav-close, li, a").click(function(){
-      $(".mobile-nav").css({"display":"none"}, 500);
+      $(".mobile-nav").css({"display":"none"}, 300);
   });
   //smooth scroll
   $('a[href*="#"]')
