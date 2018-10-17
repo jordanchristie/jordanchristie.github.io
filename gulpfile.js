@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')
+const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 
@@ -23,7 +23,7 @@ gulp.task('copyJS', () => {
 
 gulp.task('compileCSS', () => {
     gulp.src('src/*.scss')
-        .pipe(sass({outputStyle: compressed}).on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('./'))
 });
 
