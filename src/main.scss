@@ -27,7 +27,7 @@
           box-sizing: border-box;
 }
 
-body{
+html, body{
   margin: 0;
   padding: 0;
   height: 100%;
@@ -36,6 +36,10 @@ body{
   font-family: "Merriweather";
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  opacity: 0;
 }
 
 li {
@@ -65,15 +69,6 @@ nav {
   top: 0;
   height: 55px;
   width: 100%;
-  -webkit-transition: background .3s ease;
-  -webkit-transition: background .3s linear;
-  transition: background .5s linear;
-  &.active {
-    background: #191919;
-  }
-  &.active ul li a {
-    color: #fff;
-  }
 }
 
 .logo {
@@ -89,19 +84,20 @@ nav ul {
   background: rgba(0,0,0,0.8);
   bottom: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   margin: 0;
   height: 4em;
   color: #5691c8;
 }
 
 .nav-link a {
-  transition: all .3s ease-in-out;
+  color: #fff;
+  transition: all .1s ease-in-out;
 }
 
 .nav-link a:hover {
-  color: #fff;
-  transition: all .3s ease-in-out;
+  color: #5691c8;
+  transition: all .1s ease-in-out;
 }
 
 header {
@@ -200,8 +196,7 @@ h3 {
   border-radius: 5px;
   transition: all 1s ease;
   &:hover {
-    -webkit-filter: saturate(100);
-            filter: saturate(100);
+    
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
   }
@@ -216,71 +211,34 @@ h3 {
 }
 
 .contact-button {
-  display: block;
+  @include centered;
   margin: 0 auto;
   height: 60px;
-  width: 100px;
-  background: #5691c8;
-  border-radius: 10px;
-  -webkit-box-shadow: 3px 2px 10px 3px rgba(0,0,0,0.2);
-          box-shadow: 3px 2px 10px 3px rgba(0,0,0,0.2);
-  color: #fff;
-  font-size: 1.25em;
-  font-weight: bolder;
+  width: 20em;
+  background: transparent;
+  border: 2px solid #5691c8;
+  border-radius: 30px;
+  color: #5691c8;
+  font-style: italic;
+  transition: all .1s ease-out;
   &:hover {
     cursor: pointer;
+    background: #5691c8;
+    color: #fff;
+    transition: all .1s ease-in;
   }
-}
-
-.modal-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 25px;
-  background: transparent;
-}
-
-form input,textarea {
-  width: 80%;
-  border: none;
-  border-bottom: 1px solid black;
-  background: transparent;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  &:focus {
-    border-bottom: 2px solid #457fca;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-  }
-}
-
-.submit-button {
-  @extend .contact-button;
-  -webkit-box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.2);
-          box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.2);
-  margin-top: 30px;
 }
 
 footer {
   height: 100%;
   text-align: center;
+  background: #5691c8;
 }
 
 footer p {
   color: #fff;
   padding-top: 10px;
   text-align: center;
-  background: red;
 }
 
 .social-media {
@@ -333,6 +291,24 @@ footer p {
             flex-flow: column;
   }
 
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 70%;
+    list-style-type: none;
+    border-radius: 0px 0px 0px 30px;
+  }
+
+   nav ul li a {
+    font-size: 1.5em;
+    color: #5691c8;
+  }
+
   .about-caption {
     margin: 3em;
   }
@@ -340,15 +316,6 @@ footer p {
   .showcase {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-  }
-  
-  .project {
-    width: 40%;
-  }
-
-  .project img {
-    height: 250px;
-    width: 100%;
   }
  
 }
@@ -361,21 +328,16 @@ footer p {
   }
 
   nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: space-around;
-    top: 0;
-    right: 0;
-    left: auto;
     width: 40%;
-    list-style-type: none;
-    border-radius: 0px 0px 0px 30px;
   }
 
-   nav ul li a {
-    font-size: 1.5em;
-    color: #5691c8;
+  .project {
+    width: 40%;
+  }
+
+  .project img {
+    height: 250px;
+    width: 100%;
   }
 
   #contact h3 {

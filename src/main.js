@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $('body').animate({'opacity': '1'}), 1000;
   //smooth scroll
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -36,16 +37,14 @@ $(document).ready(function(){
       }
     }
   });
+  // set 0 to window 
+  window.addEventListener("load", function() {
+    setTimeout(function() {
+        window.scrollTo(0, 1)
+    }, 0)
+});
   //project hover
   $(".project").click(function(){
     $("caption-slide").css({"overflow": "none"});
-  });
-  //Modal popup
-  $(".contact-button").click(function(){
-    $(".modal").slideDown(300);
-  });
-  //Modal click out
-  $(".submit-button").click(function(){
-    $(".modal").slideUp(300);
   });
 });
