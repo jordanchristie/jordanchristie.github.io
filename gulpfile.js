@@ -17,12 +17,13 @@ gulp.task('images', () => {
 
 gulp.task('copyJS', () => {
     gulp.src('src/*.js')
+        .pipe(uglify())
         .pipe(gulp.dest('./'))
 });
 
 gulp.task('compileCSS', () => {
     gulp.src('src/*.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle: compressed}).on('error', sass.logError))
         .pipe(gulp.dest('./'))
 });
 

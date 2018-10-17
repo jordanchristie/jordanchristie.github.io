@@ -21,6 +21,9 @@ a {
   color: #fff;
   font-weight: 500; }
 
+a:hover {
+  cursor: pointer; }
+
 nav {
   z-index: 3;
   display: -webkit-box;
@@ -103,6 +106,9 @@ header {
 
 #about {
   margin: 3em auto; }
+
+.bounceInRight {
+  animation-delay: .7s; }
 
 h1 {
   text-align: center;
@@ -231,7 +237,6 @@ footer p {
   .social-media a:hover {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    color: #41579c;
     -webkit-transform: scale(1.2);
     transform: scale(1.2); }
 
@@ -286,8 +291,9 @@ footer p {
     top: 0;
     right: 0;
     left: auto;
-    width: 50%;
-    list-style-type: none; }
+    width: 40%;
+    list-style-type: none;
+    border-radius: 0px 0px 0px 30px; }
   nav ul li a {
     font-size: 1.5em;
     color: #5691c8; }
