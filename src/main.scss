@@ -71,8 +71,15 @@ nav {
   width: 100%;
 }
 
-.logo {
+path {
+  fill: #fff;
+}
+
+#logo {
+  margin: 2em;
   height: 55px;
+  border: 3px solid #fff;
+  border-radius: 50%;
 }
 
 nav ul {
@@ -291,6 +298,10 @@ footer p {
             flex-flow: column;
   }
 
+  #logo {
+    margin: 1em;
+  }
+
   nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -321,6 +332,10 @@ footer p {
 }
 
 @media (min-width: 50em) {
+  #logo {
+    margin: 2em;
+  }
+
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
