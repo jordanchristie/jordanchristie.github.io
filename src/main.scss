@@ -147,7 +147,7 @@ display: flex;
 }
 
 #about {
-  margin: 3em auto;
+  margin: 3em 0;
 }
 
 .bounceInRight {
@@ -157,6 +157,7 @@ display: flex;
 h1 {
   @include section-heading;
   text-align: center;
+  
 }
 
 .about-caption {
@@ -169,6 +170,7 @@ h1 {
   background: #F0FFF0;
   color: #333;
   width: 100%;
+  margin: 50px 0;
 }
 
 h3 {
@@ -214,25 +216,42 @@ h3 {
 }
 
 #contact {
-  margin: 50px;
+  margin: 50px 0;
 }
 
 .contact-button {
   @include centered;
+  position: relative;
   margin: 0 auto;
   height: 60px;
   width: 20em;
-  background: transparent;
+  background: none;
   border: 2px solid #5691c8;
   border-radius: 30px;
   color: #5691c8;
   font-style: italic;
-  transition: all .1s ease-out;
+  transition: color .3s ease-out;
   &:hover {
     cursor: pointer;
-    background: #5691c8;
+    //background: #5691c8;
     color: #fff;
-    transition: all .1s ease-in;
+    //transition: all .3s ease-in;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: #5691c8;
+    border-radius: 30px;
+    transform-origin: left;
+    transition: width .25s ease;
+    z-index: -1;
+  }
+  &:hover::after {
+    width: 100%;
   }
 }
 
@@ -321,7 +340,7 @@ footer p {
   }
 
   .about-caption {
-    margin: 3em;
+    margin: 3em 2em 0;
   }
 
   .showcase {
