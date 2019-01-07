@@ -7,7 +7,7 @@ const SocialMedia = [
         name: 'Github',
         url: 'https://github.com/jordanchristie',
         color: '#4183c4',
-      },
+    },
     {
         name: 'Twitter',
         url: 'https://twitter.com/j0rdanchristie',
@@ -36,9 +36,7 @@ const Footer = () => (
                 </SocialLink>
             }) }
         </SocialLinksWrapper>
-        © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+        © {new Date().getFullYear()}
     </footer>
 )
 
@@ -46,8 +44,13 @@ export default Footer
 
 const SocialLinksWrapper = styled.ul`
     list-style: none;
-    display: flex;
-    justify-content: center;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    @media screen and (min-width: 480px) {
+        display: flex;
+        justify-content: center;
+    }
 `;
 
 const SocialLink = styled.li`

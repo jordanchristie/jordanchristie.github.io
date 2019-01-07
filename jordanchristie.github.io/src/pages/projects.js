@@ -1,15 +1,13 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout, {PageTitle} from '../components/layout'
 import SEO from '../components/seo'
 
 const Projects = () => (
   <Layout>
     <SEO title="Projects" />
-    <h1>Hi from the second page</h1>
+    <PageTitle> Projects </PageTitle>
     <p> I am the projects page</p>
-    <Link to="/contact/">Contact</Link>
   </Layout>
 )
 
