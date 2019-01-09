@@ -55,4 +55,7 @@ const SocialLinksWrapper = styled.ul`
 
 const SocialLink = styled.li`
     margin: 1em;
+    a {
+        text-decoration: none;
+    }
 `

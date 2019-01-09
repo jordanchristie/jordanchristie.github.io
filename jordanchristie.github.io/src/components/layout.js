@@ -24,7 +24,7 @@ const Layout = ({ children }) => (
         <Container>
           {children}
         </Container>
-        <Footer />>
+        <Footer />
       </>
     )}
   />
@@ -46,4 +46,5 @@ export const PageTitle = styled.h1`
 const Container = styled.main`
   max-width: 960px;
   padding: 100px 5%;
+  margin: 60px auto;
 `

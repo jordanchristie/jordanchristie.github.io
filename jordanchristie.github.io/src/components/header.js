@@ -19,13 +19,13 @@ const Header = ({ siteTitle }) => (
     </Title>
     
     <NavLinkWrapper>
-      <NavLink fade to='/about' bg="#663399">
+      <NavLink to='/about' bg="#663399">
         About
       </NavLink>
-      <NavLink fade to='/projects/' bg="#663399">
+      <NavLink to='/projects/' bg="#663399">
         Projects
       </NavLink>
-      <NavLink fade to='/contact/' bg="#663399">
+      <NavLink to='/contact/' bg="#663399">
         Contact
       </NavLink>
     </NavLinkWrapper>
@@ -54,9 +54,11 @@ const SiteHeader = styled.header`
 `;
 
 const Title = styled.h1`
+  font-size: 1.5rem;
   color: white;
   letter-spacing: 3px;
   line-height: 0;
+  margin-left: 1rem;
 `
 
 const NavLinkWrapper = styled.ul`
@@ -71,6 +73,10 @@ const NavLink = styled(Link)`
   margin: 1em;
   letter-spacing: 3px;
   height: 100%;
-  font-size: 1rem;
+  font-size: .75rem;
   font-weight: 600;
+  transition: all .3s ease;
+  @media screen and (min-width: 440px) {
+    font-size: 1rem;
+  }
 `
