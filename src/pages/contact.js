@@ -9,7 +9,7 @@ const Contact = () => (
   <Layout>
     <SEO title="Contact" />
       <PageTitle> Contact </PageTitle>
-      <h3> I'm always open to discussing new projects or opportunities. If you have an idea that you want to manifest, let's talk! </h3>
+      <ContactCaption> I'm always open to discussing new projects or opportunities. If you have an idea that you want to manifest, let's talk! </ContactCaption>
       <ContactButton href="mailto:jordanchristie116@gmail.com">
         Start a conversation
       </ContactButton>
@@ -17,6 +17,10 @@ const Contact = () => (
 )
 
 export default Contact
+
+const ContactCaption = styled.h3`
+  line-height: 2;
+`
 
 const ContactButton = styled.a`
   text-decoration: none;

@@ -73,6 +73,8 @@ export default About
 
 const AboutCaption = styled.p`
   margin: 2rem auto;
+  font-size: 1.25rem;
+  line-height: 2;
 `
 
 const SkillWrap = styled.section`
