@@ -42,10 +42,10 @@ const Projects = () => (
     <ProjectWrapper>
     { ProjectList.map(project => {
       return (
-        <Project key={project.name}>
+        <Project key={project.name}  href={project.project_url}>
           <ProjectImg src={project.img_url} alt={project.name}/>
           <ProjectName>{project.name}</ProjectName>
-          <ProjectCaption href={project.project_url}> {project.description} </ProjectCaption>
+          <ProjectCaption> {project.description} </ProjectCaption>
         </Project>
       )
     })}
@@ -63,7 +63,7 @@ const ProjectWrapper = styled.section`
   }
 `
 
-const Project = styled.figure`
+const Project = styled.a`
 box-shadow: 5px 5px 3px 5px;
   border-radius: 5px;
   margin: 2rem auto;
@@ -84,8 +84,8 @@ const ProjectName = styled.h3`
   color: #333;
 `
 
-const ProjectCaption = styled.a`
+const ProjectCaption = styled.p`
   text-decoration: none;
-  padding: auto 50px 50px;
+  margin: auto 10px 20px;
   color: #333;
 `
