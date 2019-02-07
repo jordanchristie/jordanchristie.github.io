@@ -61,7 +61,7 @@ const NavLink = styled(Link)`
   letter-spacing: 3px;
   font-size: .75rem;
   font-weight: 600;
-  transition: all .3s;
+  transition: color .5s ease;
   &::after {
     content: attr(data-hover);
     position: absolute;
@@ -70,7 +70,7 @@ const NavLink = styled(Link)`
     height: 100%;
     width: 0;
     color: #5691c8;
-    transition: width .3s;
+    transition: width .3s ease;
     overflow: hidden;
   }
   &:hover {
@@ -78,6 +78,7 @@ const NavLink = styled(Link)`
   }
   &:hover::after {
     width: 100%;
+    transition: width .3s ease;
   }
   @media screen and (min-width: 440px) {
     font-size: 1rem;

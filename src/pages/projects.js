@@ -64,8 +64,7 @@ const ProjectWrapper = styled.section`
 `
 
 const Project = styled.a`
-box-shadow: 5px 5px 3px 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 2rem auto;
   text-align: center;
   transition: border-radius .3s ease;
@@ -77,7 +76,8 @@ box-shadow: 5px 5px 3px 5px;
 `
 
 const ProjectImg = styled.img`
-  height: 200px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;  
 `
 const ProjectName = styled.h3`
