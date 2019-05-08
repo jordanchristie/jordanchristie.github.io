@@ -43,7 +43,7 @@ export const PageTitle = styled.h1`
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 3px;
-`;
+`
 
 const Container = styled.main`
   max-width: 960px;

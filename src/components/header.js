@@ -2,22 +2,24 @@ import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 
+const liStyle = {}
+
 const Header = () => (
   <SiteHeader>
     <Title to="/"> JC </Title>
 
     <NavLinkWrapper>
-      <li>
+      <li style={liStyle}>
         <NavLink to="/about" data-hover="About">
           About
         </NavLink>
       </li>
-      <li>
+      <li style={liStyle}>
         <NavLink to="/projects/" data-hover="Projects">
           Projects
         </NavLink>
       </li>
-      <li>
+      <li style={liStyle}>
         <NavLink to="/contact/" data-hover="Contact">
           Contact
         </NavLink>
@@ -52,6 +54,8 @@ const NavLinkWrapper = styled.ul`
   height: inherit;
   align-self: flex-end;
   padding-top: 20px;
+  list-style-type: none;
+  display: inline-flex;
   @media screen and (min-width: 608px) {
     padding-top: 0;
   }
