@@ -4,18 +4,24 @@ import styled from 'styled-components'
 
 const Header = () => (
   <SiteHeader>
-    <Title to='/'> JC </Title>
-    
+    <Title to="/"> JC </Title>
+
     <NavLinkWrapper>
-      <NavLink to='/about'  data-hover="About">
-        About
-      </NavLink>
-      <NavLink to='/projects/'  data-hover="Projects">
-        Projects
-      </NavLink>
-      <NavLink to='/contact/'  data-hover="Contact">
-        Contact
-      </NavLink>
+      <li>
+        <NavLink to="/about" data-hover="About">
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/projects/" data-hover="Projects">
+          Projects
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/contact/" data-hover="Contact">
+          Contact
+        </NavLink>
+      </li>
     </NavLinkWrapper>
   </SiteHeader>
 )
@@ -32,14 +38,14 @@ const SiteHeader = styled.header`
   justify-content: space-between;
   padding: 1em;
   align-items: center;
-`;
+`
 
 const Title = styled(Link)`
   font-size: 64px;
   text-decoration: none;
   color: #5691c8;
   letter-spacing: 3px;
-  padding: .25em;
+  padding: 0.25em;
 `
 
 const NavLinkWrapper = styled.ul`
@@ -59,9 +65,9 @@ const NavLink = styled(Link)`
   color: #fff;
   margin: 2em 1em 0;
   letter-spacing: 3px;
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  transition: color .5s ease;
+  transition: color 0.5s ease;
   &::after {
     content: attr(data-hover);
     position: absolute;
@@ -70,7 +76,7 @@ const NavLink = styled(Link)`
     height: 100%;
     width: 0;
     color: #5691c8;
-    transition: width .3s ease;
+    transition: width 0.3s ease;
     overflow: hidden;
   }
   &:hover {
@@ -78,7 +84,7 @@ const NavLink = styled(Link)`
   }
   &:hover::after {
     width: 100%;
-    transition: width .3s ease;
+    transition: width 0.3s ease;
   }
   @media screen and (min-width: 440px) {
     font-size: 1rem;
