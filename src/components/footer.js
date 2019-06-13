@@ -48,6 +48,9 @@ const SocialLinksWrapper = styled.ul`
   display: inline-block;
   margin: 0;
   padding: 0;
+  small {
+    margin-top: 16px;
+  }
   @media screen and (min-width: 480px) {
     display: flex;
     justify-content: center;

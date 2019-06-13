@@ -1,30 +1,33 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-
-const liStyle = {}
+import Fade from 'react-reveal/Fade'
 
 const Header = () => (
   <SiteHeader>
-    <Title to="/"> JC </Title>
+    <Fade left>
+      <Title to="/"> JC </Title>
+    </Fade>
 
-    <NavLinkWrapper>
-      <li style={liStyle}>
-        <NavLink to="/about" data-hover="About">
-          About
-        </NavLink>
-      </li>
-      <li style={liStyle}>
-        <NavLink to="/projects/" data-hover="Projects">
-          Projects
-        </NavLink>
-      </li>
-      <li style={liStyle}>
-        <NavLink to="/contact/" data-hover="Contact">
-          Contact
-        </NavLink>
-      </li>
-    </NavLinkWrapper>
+    <Fade right>
+      <NavLinkWrapper>
+        <li>
+          <NavLink to="/about" data-hover="About">
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/projects" data-hover="Projects">
+            Projects
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" data-hover="Contact">
+            Contact
+          </NavLink>
+        </li>
+      </NavLinkWrapper>
+    </Fade>
   </SiteHeader>
 )
 
@@ -52,12 +55,12 @@ const Title = styled(Link)`
 
 const NavLinkWrapper = styled.ul`
   height: inherit;
-  align-self: flex-end;
-  padding-top: 20px;
+  align-items: center;
+  margin: 2rem 0 0 0;
   list-style-type: none;
   display: inline-flex;
   @media screen and (min-width: 608px) {
-    padding-top: 0;
+    margin-top: 3em 0 0 0;
   }
 `
 
@@ -85,6 +88,7 @@ const NavLink = styled(Link)`
   }
   &:hover {
     color: transparent;
+    transition: color 0.1s linear;
   }
   &:hover::after {
     width: 100%;

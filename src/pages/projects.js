@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import Layout, { PageTitle } from '../components/layout'
+import { PageTitle } from '../components'
 import SEO from '../components/seo'
 import Inspiri from '../images/Inspiri.png'
 import Jorsquare from '../images/Jorsquare.png'
 import ReactTube from '../images/ReactTube.png'
 import GithubAPI from '../images/GithubAPI.png'
+import Layout from '../components/layout'
 
 const ProjectList = [
   {
