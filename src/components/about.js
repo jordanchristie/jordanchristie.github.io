@@ -1,12 +1,13 @@
 import React from 'react'
-import SEO from '../components/seo'
+import SEO from './seo'
 import {
+  WhiteSection,
   PageTitle,
   AboutCaption,
   SkillWrap,
   Skill,
   SkillImg,
-} from '../components'
+} from './index'
 import HTML5 from '../images/HTML5.svg'
 import CSS3 from '../images/CSS3.svg'
 import Javascript from '../images/javascript.svg'
@@ -15,7 +16,6 @@ import Redux from '../images/redux.svg'
 import NodeJS from '../images/nodejs.svg'
 import MongoDB from '../images/mongodb.svg'
 import GatsbyLogo from '../images/gatsby.svg'
-import Layout from '../components/layout'
 
 // To-do: Add tooling/language SVGs
 const Skills = [
@@ -54,7 +54,7 @@ const Skills = [
 ]
 // Second Paragraph?
 const About = () => (
-  <Layout>
+  <WhiteSection>
     <SEO title="About" />
     <PageTitle>About</PageTitle>
     <AboutCaption>
@@ -76,7 +76,7 @@ const About = () => (
         )
       })}
     </SkillWrap>
-  </Layout>
+  </WhiteSection>
 )
 
 export default About

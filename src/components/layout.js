@@ -2,9 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { Container } from './index'
-import Header from './header'
-import Footer from './footer'
-import ParticleBackground from './particle-background'
 import './layout.css'
 
 const Layout = ({ children }) => (
@@ -19,16 +16,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.author} />
-        <Container>
-          <ParticleBackground />
-          {children}
-        </Container>
-        <Footer />
-      </>
-    )}
+    render={data => <Container>{children}</Container>}
   />
 )
 

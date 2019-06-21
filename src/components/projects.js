@@ -6,7 +6,6 @@ import Inspiri from '../images/Inspiri.png'
 import Jorsquare from '../images/Jorsquare.png'
 import ReactTube from '../images/ReactTube.png'
 import GithubAPI from '../images/GithubAPI.png'
-import Layout from '../components/layout'
 
 const ProjectList = [
   {
@@ -38,7 +37,7 @@ const ProjectList = [
 ]
 
 const Projects = () => (
-  <Layout>
+  <ProjectSection>
     <SEO title="Projects" />
     <PageTitle> Projects </PageTitle>
     <ProjectWrapper>
@@ -52,10 +51,15 @@ const Projects = () => (
         )
       })}
     </ProjectWrapper>
-  </Layout>
+  </ProjectSection>
 )
 
 export default Projects
+
+const ProjectSection = styled.section`
+  background: #1f2b57;
+  padding: 60px 5%;
+`
 
 const ProjectWrapper = styled.section`
   display: flex;
@@ -64,12 +68,13 @@ const ProjectWrapper = styled.section`
 `
 
 const Project = styled.a`
-  width: 60%;
+  width: 90%;
   border-radius: 10px;
   margin: 1em;
   text-align: center;
   transition: border-radius 0.3s ease;
   background: #fff;
+  text-decoration: none;
   &:hover {
     border-radius: 0px;
     transition: border-radius 0.3s ease;
