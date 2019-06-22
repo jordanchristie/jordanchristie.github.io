@@ -129,6 +129,7 @@ export const SkillImg = styled.img`
 `
 
 export const ContactSection = styled.section`
+  margin: 5rem auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
