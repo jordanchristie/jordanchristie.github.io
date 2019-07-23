@@ -12,7 +12,7 @@ export const SiteHeader = styled.header`
   justify-content: space-between;
   padding: 1em;
   align-items: center;
-  z-index: 100
+  z-index: 100;
   color: #fff;
   transition: padding 0.3s ease, color 0.3s ease, background 0.5s ease;
   &.scrolled {

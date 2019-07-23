@@ -24,17 +24,17 @@ const Header = () => {
       <Fade right>
         <NavLinkWrapper>
           <li>
-            <NavLink to="#about" data-hover="About">
+            <NavLink to="/#about" data-hover="About">
               About
             </NavLink>
           </li>
           <li>
-            <NavLink to="#projects" data-hover="Projects">
+            <NavLink to="/#projects" data-hover="Projects">
               Projects
             </NavLink>
           </li>
           <li>
-            <NavLink to="#contact" data-hover="Contact">
+            <NavLink to="/#contact" data-hover="Contact">
               Contact
             </NavLink>
           </li>
