@@ -37,7 +37,7 @@ const ProjectList = [
 ]
 
 const Projects = () => (
-  <ProjectSection>
+  <ProjectSection id="projects">
     <SEO title="Projects" />
     <PageTitle> Projects </PageTitle>
     <ProjectWrapper>

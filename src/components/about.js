@@ -54,7 +54,7 @@ const Skills = [
 ]
 // Second Paragraph?
 const About = () => (
-  <WhiteSection>
+  <WhiteSection id="about">
     <SEO title="About" />
     <PageTitle>About</PageTitle>
     <AboutCaption>

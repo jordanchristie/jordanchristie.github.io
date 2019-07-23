@@ -12,6 +12,15 @@ export const SiteHeader = styled.header`
   justify-content: space-between;
   padding: 1em;
   align-items: center;
+  z-index: 100
+  color: #fff;
+  transition: padding 0.3s ease, color 0.3s ease, background 0.5s ease;
+  &.scrolled {
+    background: white;
+    padding: 0;
+    transition: padding 0.3s ease, color 0.3s ease, background 0.5s ease;
+    color: #333;
+  }
 `
 
 export const Title = styled(Link)`
@@ -38,7 +47,7 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
-  color: #fff;
+  color: inherit;
   margin: 2em 1em 0;
   letter-spacing: 3px;
   font-size: 0.75rem;

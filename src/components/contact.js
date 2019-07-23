@@ -35,7 +35,7 @@ const SocialMedia = [
 ]
 
 const Contact = () => (
-  <WhiteSection>
+  <WhiteSection id="contact">
     <SEO title="Contact" />
     <ContactSection>
       <ContactLeft>
