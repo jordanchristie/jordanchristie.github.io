@@ -4,7 +4,7 @@ import { PageTitle } from '../components'
 import SEO from '../components/seo'
 import Inspiri from '../images/Inspiri.png'
 import Jorsquare from '../images/Jorsquare.png'
-import ReactTube from '../images/ReactTube.png'
+import MickeysHouse from '../images/MickeysHouse.png'
 import GithubAPI from '../images/GithubAPI.png'
 
 const ProjectList = [
@@ -23,9 +23,10 @@ const ProjectList = [
     project_url: 'https://codesandbox.io/s/rl6qnl6jrn',
   },
   {
-    name: 'ReactTube',
-    description: 'A React powered Youtube search app.',
-    img_url: ReactTube,
+    name: `Mickey's House`,
+    description:
+      'A full-stck Walt Disney World search app for restaurants and attractions.',
+    img_url: MickeysHouse,
     project_url: 'https://github.com/jordanchristie/ReactTube',
   },
   {
