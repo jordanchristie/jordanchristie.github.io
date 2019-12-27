@@ -2,10 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { PageTitle } from '../components'
 import SEO from '../components/seo'
-import Inspiri from '../images/Inspiri.png'
-import Jorsquare from '../images/Jorsquare.png'
-import MickeysHouse from '../images/MickeysHouse.png'
-import GithubAPI from '../images/GithubAPI.png'
 
 const ProjectList = [
   {
