@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { PageTitle } from '../components'
 import SEO from '../components/seo'
-import { ProjectList } from './api/projectlist'
+import { ProjectList } from '../api/projectlist'
 
 const Projects = () => (
   <ProjectSection id="projects">
