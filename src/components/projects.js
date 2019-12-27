@@ -27,7 +27,7 @@ const ProjectList = [
     description:
       'A full-stck Walt Disney World search app for restaurants and attractions.',
     img_url: MickeysHouse,
-    project_url: 'https://github.com/jordanchristie/ReactTube',
+    project_url: 'https://mickeys-house.herokuapp.com/',
   },
   {
     name: 'GithubAPI',
