@@ -14,11 +14,10 @@ export const SiteHeader = styled.header`
   align-items: center;
   z-index: 100;
   color: #fff;
-  transition: padding 0.3s ease, color 0.3s ease, background 0.5s ease;
+  transition: color 0.3s ease, background 0.5s ease;
   &.scrolled {
     background: white;
-    padding: 0;
-    transition: padding 0.3s ease, color 0.3s ease, background 0.5s ease;
+    transition: color 0.3s ease, background 0.5s ease;
     color: #333;
   }
 `
@@ -52,11 +51,11 @@ export const NavLink = styled(Link)`
   letter-spacing: 3px;
   font-size: 0.75rem;
   font-weight: 600;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
   &::after {
     content: attr(data-hover);
     position: absolute;
-    top: -1.5px;
+    top: -2px;
     left: 0;
     height: 100%;
     width: 0;
@@ -114,8 +113,9 @@ export const WhiteSection = styled.section`
 
 export const AboutCaption = styled.p`
   margin: 2rem auto;
-  font-size: 1.5rem;
+  font-size: 20pt;
   line-height: 2;
+  color: rgb(112, 112, 112);
 `
 
 export const SkillWrap = styled.section`

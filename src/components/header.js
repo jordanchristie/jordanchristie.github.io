@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <SiteHeader className={scroll ? 'scrolled' : ''}>
       <Fade left>
-        <Title to="/"> JC </Title>
+        <Title to="/">JC</Title>
       </Fade>
 
       <Fade right>
