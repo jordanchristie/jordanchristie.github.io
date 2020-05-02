@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { Link } from 'gatsby'
 
 // Header
@@ -41,7 +42,7 @@ export const NavLinkWrapper = styled.ul`
   }
 `
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(AnchorLink)`
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
