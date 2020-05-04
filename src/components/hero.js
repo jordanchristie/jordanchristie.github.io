@@ -21,7 +21,9 @@ const Hero = () => (
         </ProfileCaption>
       </Fade>
       <Fade delay={1500}>
-        <ContactButton>Get In Touch</ContactButton>
+        <ContactButton href="mailto:jordanchristie116@gmail.com">
+          Get In Touch
+        </ContactButton>
       </Fade>
     </HeroWrapper>
   </>
