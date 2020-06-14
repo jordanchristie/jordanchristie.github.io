@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { PageTitle } from '../components'
+import { PageTitle, Container } from '../components'
 import SEO from '../components/seo'
 import { ProjectList } from '../api/projectlist'
 
 const Projects = () => (
   <ProjectSection id="projects">
     <SEO title="Projects" />
-    <PageTitle> Projects </PageTitle>
+    <Container>
+    <PageTitle white> Projects </PageTitle>
     <ProjectWrapper>
       {ProjectList.map(project => {
         return (
@@ -19,6 +20,7 @@ const Projects = () => (
         )
       })}
     </ProjectWrapper>
+    </Container>
   </ProjectSection>
 )
 
@@ -31,14 +33,13 @@ const ProjectSection = styled.section`
 
 const ProjectWrapper = styled.section`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-flow: row wrap;
 `
 
 const Project = styled.a`
-  width: 90%;
   border-radius: 10px;
-  margin: 1em;
+  margin: 1em 0;
   text-align: center;
   transition: border-radius 0.3s ease;
   background: #fff;

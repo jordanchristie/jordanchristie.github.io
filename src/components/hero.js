@@ -1,16 +1,14 @@
 import React from 'react'
 import SEO from './seo'
 import { Fade } from 'react-reveal'
-import ParticleBackground from './particle-background'
-import { HeroWrapper, ProfileCaption, ContactButton } from './index'
+import { HeroWrapper, ProfileCaption, ContactButton, Container } from './index'
 
 const Hero = () => (
-  <>
+  <Container>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <ParticleBackground />
     <HeroWrapper>
       <Fade bottom duration={3000}>
-        <h1 style={{ fontSize: '2.4rem', textTransform: 'uppercase' }}>
+        <h1>
           Jordan Christie
         </h1>
       </Fade>
@@ -26,7 +24,7 @@ const Hero = () => (
         </ContactButton>
       </Fade>
     </HeroWrapper>
-  </>
+  </Container>
 )
 
 export default Hero

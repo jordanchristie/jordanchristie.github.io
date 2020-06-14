@@ -47,31 +47,13 @@ export const NavLink = styled(AnchorLink)`
   text-decoration: none;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
-  color: inherit;
   margin: 2em 1em 0;
   letter-spacing: 3px;
   font-size: 0.75rem;
   font-weight: 600;
   transition: color 0.3s ease;
-  &::after {
-    content: attr(data-hover);
-    position: absolute;
-    top: -2px;
-    left: 0;
-    height: 100%;
-    width: 0;
-    color: #5691c8;
-    transition: width 0.3s ease;
-    overflow: hidden;
-  }
-  &:hover {
-    color: white;
-    transition: color 0.1s linear;
-  }
-  &:hover::after {
-    width: 100%;
-    transition: width 0.3s ease;
-  }
+  color: #5691c8;
+  
   @media screen and (min-width: 440px) {
     font-size: 1rem;
   }
@@ -83,9 +65,12 @@ export const HeroWrapper = styled.section`
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0 5%;
+  align-items: flex-start;
+  margin: 0;
+
+  h1 {
+    text-transform: uppercase;
+  }
 `
 
 export const ProfileCaption = styled.p`
@@ -97,19 +82,16 @@ export const PageTitle = styled.h1`
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 3px;
+  color: ${props => props.white ? "#fff" : "#333"};
 `
 
-export const Container = styled.main`
-  min-height: 100vh;
-  color: #fff;
+export const Container = styled.section`
+  padding: 2rem 0;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
   font-size: 16px;
   scroll-behavior: smooth;
-`
-
-export const WhiteSection = styled.section`
-  margin: 60px 5% 60px;
-  background: #fff;
-  color: #333;
 `
 
 export const AboutCaption = styled.p`
@@ -122,11 +104,11 @@ export const AboutCaption = styled.p`
 export const SkillWrap = styled.section`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
 `
 
 export const Skill = styled.div`
-  margin: 0.5em 1em 1.5em;
+  margin: 2em 0;
   p {
     margin: -1em;
     text-align: center;
@@ -139,7 +121,6 @@ export const SkillImg = styled.img`
 `
 
 export const ContactSection = styled.section`
-  margin: 5rem auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;

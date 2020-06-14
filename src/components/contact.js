@@ -2,7 +2,7 @@ import React from 'react'
 
 import SEO from './seo'
 import {
-  WhiteSection,
+  Container,
   ContactSection,
   ContactLeft,
   ContactCaption,
@@ -35,7 +35,7 @@ const SocialMedia = [
 ]
 
 const Contact = () => (
-  <WhiteSection id="contact">
+  <Container id="contact">
     <SEO title="Contact" />
     <ContactSection>
       <ContactLeft>
@@ -57,7 +57,7 @@ const Contact = () => (
         })}
       </SocialLinksWrapper>
     </ContactSection>
-  </WhiteSection>
+  </Container>
 )
 
 export default Contact
