@@ -67,15 +67,19 @@ export const HeroWrapper = styled.section`
   justify-content: center;
   align-items: flex-start;
   margin: 0;
+  background: rgba(250,250,250,1)
 
   h1 {
     text-transform: uppercase;
+    margin: 0;
   }
 `
 
-export const ProfileCaption = styled.p`
+export const ProfileCaption = styled.h2`
+  color: rgb(112, 112, 112);
+  font-weight: normal;
   font-size: 1.5rem;
-  line-height: 2;
+  margin: 2em 0;
 `
 
 export const PageTitle = styled.h1`
@@ -86,6 +90,7 @@ export const PageTitle = styled.h1`
 `
 
 export const Container = styled.section`
+  min-height: ${props => props.blog ? '100vh' : ''}; 
   padding: 2rem 0;
   width: 100%;
   max-width: 960px;

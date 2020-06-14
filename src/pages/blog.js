@@ -1,10 +1,16 @@
 import React from 'react'
 import Layout from '../components/layout'
+import { Container } from '../components'
+import Hero from '../components/hero'
 
 const Blog = () => {
     return (
         <Layout>
-            <h1>This is the blog page!</h1>
+            <Container blog>
+                <Hero>
+                <h1>This is the blog page!</h1>
+                </Hero>
+            </Container>
         </Layout>
     )
 }
