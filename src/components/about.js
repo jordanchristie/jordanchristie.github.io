@@ -54,7 +54,8 @@ const Skills = [
 ]
 // Second Paragraph?
 const About = () => (
-  <Container id="about">
+  <div id="about" style={{background: '#f8fafa'}}>
+  <Container >
     <SEO title="About" />
     <PageTitle>About</PageTitle>
     <AboutCaption>
@@ -77,6 +78,7 @@ const About = () => (
       })}
     </SkillWrap>
   </Container>
+  </div>
 )
 
 export default About

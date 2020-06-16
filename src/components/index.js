@@ -79,7 +79,7 @@ export const ProfileCaption = styled.h2`
   color: rgb(112, 112, 112);
   font-weight: normal;
   font-size: 1.5rem;
-  margin: 2em 0;
+  margin-bottom: 1.45em
 `
 
 export const PageTitle = styled.h1`
