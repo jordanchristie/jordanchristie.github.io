@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: '.env',
+})
+
 module.exports = {
   siteMetadata: {
     title: `Jordan Christie | Front-End/UI Developer`,
@@ -29,8 +33,13 @@ module.exports = {
         icon: `src/images/Logo.svg`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-prismic-graphql`,
+      options: {
+        repositoryName: `jordanchristie-blog`,
+        accessToken: `${process.env.API_KEY}`,
+        lang: `en-us`,
+      },
+    },
   ],
 }

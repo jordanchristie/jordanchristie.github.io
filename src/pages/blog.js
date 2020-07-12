@@ -1,18 +1,37 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import { Container } from '../components'
-import Hero from '../components/hero'
+import { Container, BlogHeader } from '../components'
 
-const Blog = () => {
-    return (
-        <Layout>
-            <Container blog>
-                <Hero>
-                <h1>This is the blog page!</h1>
-                </Hero>
-            </Container>
-        </Layout>
-    )
+const Blog = ({ data: { prismic } }) => {
+  console.log(prismic)
+  return (
+    <Layout>
+      <Container blog>
+        <BlogHeader>Blog</BlogHeader>
+      </Container>
+    </Layout>
+  )
 }
 
 export default Blog
+
+export const PageQuery = graphql`
+  query {
+    prismic {
+      _allDocuments {
+        edges {
+          node {
+            _meta {
+              uid
+            }
+            ... on PRISMIC_Blog {
+              title
+              content
+            }
+          }
+        }
+      }
+    }
+  }
+`
