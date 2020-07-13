@@ -15,7 +15,7 @@ const Post = ({ data: { prismic } }) => {
 export default Post
 
 export const pageQuery = graphql`
-  query PostBySlug($uid: String!) {
+  query BlogQuery($uid: String!) {
     prismic {
       blog(uid: $uid, lang: "en-us") {
         title

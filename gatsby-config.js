@@ -37,8 +37,17 @@ module.exports = {
       resolve: `gatsby-source-prismic-graphql`,
       options: {
         repositoryName: `jordanchristie-blog`,
+        defaultLang: `en-us`,
         accessToken: `${process.env.API_KEY}`,
         lang: `en-us`,
+        pages: [
+          {
+            type: `Post`,
+            match: `/blog/:uid`,
+            path: `/blog`,
+            component: require.resolve(`./src/templates/post.js`),
+          },
+        ],
       },
     },
   ],
