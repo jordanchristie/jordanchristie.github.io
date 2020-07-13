@@ -6,7 +6,6 @@ import Header from './header'
 import Footer from './footer'
 import './layout.css'
 
-
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -20,11 +19,11 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-    <>
-      <Header />
-      <Content>{children}</Content>
-      <Footer/>
-    </>  
+      <>
+        <Header />
+        <Content>{children}</Content>
+        <Footer />
+      </>
     )}
   />
 )
@@ -35,6 +34,4 @@ Layout.propTypes = {
 
 export default Layout
 
-const Content = styled.main`
-
-`
+const Content = styled.main``

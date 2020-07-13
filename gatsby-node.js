@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { data } = await graphql(`
     {
       prismic {
-        allBlogs {
+        allBlogs(sortBy: meta_firstPublicationDate_DESC) {
           edges {
             node {
               _meta {

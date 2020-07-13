@@ -1,13 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Container } from '../components'
+import Header from '../components/header'
 
 const Post = ({ data: { prismic } }) => {
-  const { data } = prismic
+  const { post } = prismic
 
   return (
     <>
-      <h1>{data.title.text}</h1>
-      <div dangerouslySetInnerHTML={{ __html: data.content.html }} />
+      <Header />
+      <Container>
+        <h1>{post.title[0].text}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.content[0].text }} />
+      </Container>
     </>
   )
 }
@@ -15,11 +20,15 @@ const Post = ({ data: { prismic } }) => {
 export default Post
 
 export const pageQuery = graphql`
-  query BlogQuery($uid: String!) {
+  query PostQuery($uid: String!) {
     prismic {
-      blog(uid: $uid, lang: "en-us") {
+      post(lang: "en-us", uid: $uid) {
+        _meta {
+          uid
+        }
         title
         content
+        image
       }
     }
   }

@@ -92,7 +92,7 @@ export const Container = styled.section`
   padding: 2rem 0;
   width: 100%;
   max-width: 960px;
-  margin: 0 auto;
+  margin: 3em auto;
   font-size: 16px;
   scroll-behavior: smooth;
 `
@@ -202,6 +202,4 @@ export const SocialLink = styled.li`
 `
 
 // BLOG COMPONENTS
-export const BlogHeader = styled.h1`
-  margin-top: 3em;
-`
+export const BlogHeader = styled.h1``
