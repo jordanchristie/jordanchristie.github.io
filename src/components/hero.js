@@ -3,12 +3,10 @@ import SEO from './seo'
 
 import { HeroWrapper, Container } from './index'
 
-const Hero = ({children}) => (
+const Hero = ({ children }) => (
   <Container>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <HeroWrapper>
-      {children}
-    </HeroWrapper>
+    <HeroWrapper>{children}</HeroWrapper>
   </Container>
 )
 

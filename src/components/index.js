@@ -61,7 +61,7 @@ export const NavLink = styled(AnchorLink)`
 //------------------//
 // Hero
 export const HeroWrapper = styled.section`
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -95,6 +95,10 @@ export const Container = styled.section`
   margin: 3em auto;
   font-size: 16px;
   scroll-behavior: smooth;
+
+  @media screen and (max-width: 1100px) {
+    margin: 0 20px;
+  }
 `
 
 export const AboutCaption = styled.p`
@@ -107,11 +111,11 @@ export const AboutCaption = styled.p`
 export const SkillWrap = styled.section`
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
 `
 
 export const Skill = styled.div`
-  margin: 2em 0;
+  margin: 2em;
   p {
     margin: -1em;
     text-align: center;
@@ -203,3 +207,25 @@ export const SocialLink = styled.li`
 
 // BLOG COMPONENTS
 export const BlogHeader = styled.h1``
+
+export const BlogCard = styled.ul`
+  list-style: none;
+  margin: 2rem 0;
+  padding: 1em 2em;
+  border: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+
+  time {
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+`

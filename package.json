@@ -20,6 +20,7 @@
     "gatsby-source-prismic-graphql": "^3.6.2",
     "gatsby-transformer-sharp": "^2.1.19",
     "gsap": "^2.0.2",
+    "moment": "^2.27.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-anchor-link-smooth-scroll": "^1.0.12",
