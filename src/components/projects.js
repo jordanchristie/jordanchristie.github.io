@@ -12,7 +12,7 @@ const Projects = () => (
       <ProjectWrapper>
         {ProjectList.map(project => {
           return (
-            <Project key={project.name} href={project.project_url}>
+            <Project key={project.name}>
               <ProjectImg src={project.img_url} alt={project.name} />
               <ProjectImgOverlay>
                 <a href={project.project_url}>Live</a>
@@ -32,7 +32,6 @@ export default Projects
 
 const ProjectSection = styled.section`
   background: #1f2b57;
-  padding: 60px 5%;
 `
 
 const ProjectWrapper = styled.section`
@@ -41,13 +40,12 @@ const ProjectWrapper = styled.section`
   flex-flow: row wrap;
 `
 
-const Project = styled.a`
+const Project = styled.div`
   border-radius: 20px;
   margin: 1em 0;
   text-align: center;
   transition: border-radius 0.3s ease;
   background: #fff;
-  text-decoration: none;
   position: relative;
   a {
     transform: translateY(10rem);
@@ -60,17 +58,12 @@ const Project = styled.a`
     padding: 1rem 3rem;
   }
 
-  &:hover a {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.3s ease;
-  }
   &:hover {
     border-radius: 0px;
     transition: border-radius 0.3s ease;
   }
   @media screen and (min-width: 790px) {
-    width: 40%;
+    width: 45%;
   }
 `
 
@@ -84,15 +77,26 @@ const ProjectImgOverlay = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  bottom: 40%;
+  bottom: 25%;
   background: transparent;
   display: flex;
   justify-content: space-around;
   align-items: center;
   transition: all 0.3s ease;
+
   &:hover {
     transition: all 0.3s ease;
     background: rgba(0, 0, 0, 0.8);
+  }
+
+  &:hover a {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+  }
+
+  @media screen and (min-width: 790px) {
+    bottom: 40%;
   }
 `
 const ProjectName = styled.h3`

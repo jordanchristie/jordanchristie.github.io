@@ -54,6 +54,11 @@ export const NavLink = styled(AnchorLink)`
   transition: color 0.3s ease;
   color: #5691c8;
 
+  &:hover {
+    transition: color 0.3s ease;
+    color: #1f2b57;
+  }
+
   @media screen and (min-width: 440px) {
     font-size: 1rem;
   }
@@ -89,10 +94,10 @@ export const PageTitle = styled.h1`
 
 export const Container = styled.section`
   min-height: ${props => (props.blog ? '100vh' : '')};
-  padding: 2rem 0;
+  padding: 5rem 0.75rem;
   width: 100%;
   max-width: 960px;
-  margin: 3em auto;
+  margin: 0 auto;
   font-size: 16px;
   scroll-behavior: smooth;
 

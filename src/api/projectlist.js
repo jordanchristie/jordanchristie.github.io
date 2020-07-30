@@ -21,7 +21,7 @@ export const ProjectList = [
   {
     name: `Mickey's House`,
     description:
-      'A full-stck Walt Disney World search app for restaurants and attractions.',
+      'A full-stack Walt Disney World search app for restaurants and attractions.',
     img_url: MickeysHouse,
     project_url: 'https://github.com/jordanchristie/ReactTube',
   },

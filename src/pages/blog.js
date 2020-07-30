@@ -11,7 +11,7 @@ const Blog = ({ data: { prismic } }) => {
   console.log(prismic.allPosts.edges)
   return (
     <Layout>
-      <Container blog>
+      <Container>
         <BlogHeader>Blog</BlogHeader>
         {prismic.allPosts.edges.map(({ node }) => (
           <BlogCard>
