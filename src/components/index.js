@@ -47,31 +47,18 @@ export const NavLink = styled(AnchorLink)`
   text-decoration: none;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
-  color: inherit;
   margin: 2em 1em 0;
   letter-spacing: 3px;
   font-size: 0.75rem;
   font-weight: 600;
   transition: color 0.3s ease;
-  &::after {
-    content: attr(data-hover);
-    position: absolute;
-    top: -2px;
-    left: 0;
-    height: 100%;
-    width: 0;
-    color: #5691c8;
-    transition: width 0.3s ease;
-    overflow: hidden;
-  }
+  color: #5691c8;
+
   &:hover {
-    color: white;
-    transition: color 0.1s linear;
+    transition: color 0.3s ease;
+    color: #1f2b57;
   }
-  &:hover::after {
-    width: 100%;
-    transition: width 0.3s ease;
-  }
+
   @media screen and (min-width: 440px) {
     font-size: 1rem;
   }
@@ -79,37 +66,44 @@ export const NavLink = styled(AnchorLink)`
 //------------------//
 // Hero
 export const HeroWrapper = styled.section`
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0 5%;
+  align-items: flex-start;
+  margin: 0;
+  background: rgba(250, 250, 250, 1) h1 {
+    text-transform: uppercase;
+    margin: 0;
+  }
 `
 
-export const ProfileCaption = styled.p`
+export const ProfileCaption = styled.h2`
+  color: rgb(112, 112, 112);
+  font-weight: normal;
   font-size: 1.5rem;
-  line-height: 2;
+  margin-bottom: 1.45em;
 `
 
 export const PageTitle = styled.h1`
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 3px;
+  color: ${props => (props.white ? '#fff' : '#333')};
 `
 
-export const Container = styled.main`
-  min-height: 100vh;
-  color: #fff;
+export const Container = styled.section`
+  min-height: ${props => (props.blog ? '100vh' : '')};
+  padding: 5rem 0.75rem;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
   font-size: 16px;
   scroll-behavior: smooth;
-`
 
-export const WhiteSection = styled.section`
-  margin: 60px 5% 60px;
-  background: #fff;
-  color: #333;
+  @media screen and (max-width: 1100px) {
+    margin: 0 20px;
+  }
 `
 
 export const AboutCaption = styled.p`
@@ -122,11 +116,11 @@ export const AboutCaption = styled.p`
 export const SkillWrap = styled.section`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 `
 
 export const Skill = styled.div`
-  margin: 0.5em 1em 1.5em;
+  margin: 2em;
   p {
     margin: -1em;
     text-align: center;
@@ -139,7 +133,6 @@ export const SkillImg = styled.img`
 `
 
 export const ContactSection = styled.section`
-  margin: 5rem auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -214,5 +207,30 @@ export const SocialLink = styled.li`
       color: #5691c8;
       transition: color 0.3s ease;
     }
+  }
+`
+
+// BLOG COMPONENTS
+export const BlogHeader = styled.h1``
+
+export const BlogCard = styled.ul`
+  list-style: none;
+  margin: 2rem 0;
+  padding: 1em 2em;
+  border: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+
+  time {
+    font-size: 0.8rem;
+    opacity: 0.6;
   }
 `

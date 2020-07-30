@@ -1,7 +1,7 @@
 import React from 'react'
 import SEO from './seo'
 import {
-  WhiteSection,
+  Container,
   PageTitle,
   AboutCaption,
   SkillWrap,
@@ -54,7 +54,8 @@ const Skills = [
 ]
 // Second Paragraph?
 const About = () => (
-  <WhiteSection id="about">
+  <div id="about" style={{background: '#f8fafa'}}>
+  <Container >
     <SEO title="About" />
     <PageTitle>About</PageTitle>
     <AboutCaption>
@@ -76,7 +77,8 @@ const About = () => (
         )
       })}
     </SkillWrap>
-  </WhiteSection>
+  </Container>
+  </div>
 )
 
 export default About

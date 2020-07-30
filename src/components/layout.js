@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import { Container } from './index'
+import styled from 'styled-components'
+import Header from './header'
+import Footer from './footer'
 import './layout.css'
 
 const Layout = ({ children }) => (
@@ -16,7 +18,13 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => <Container>{children}</Container>}
+    render={data => (
+      <>
+        <Header />
+        <Content>{children}</Content>
+        <Footer />
+      </>
+    )}
   />
 )
 
@@ -25,3 +33,5 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+const Content = styled.main``
