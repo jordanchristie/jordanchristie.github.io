@@ -10,8 +10,9 @@ const Post = ({ data: { prismic } }) => {
     <>
       <Header />
       <Container>
-        <h1>{post.title[0].text}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.content[0].text }} />
+        <h1>Blog coming soon!</h1>
+        {/* <h1>{post.title[0].text}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.content[0].text }} /> */}
       </Container>
     </>
   )
