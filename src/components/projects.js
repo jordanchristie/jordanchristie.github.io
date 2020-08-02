@@ -16,7 +16,7 @@ const Projects = () => (
               <ProjectImg src={project.img_url} alt={project.name} />
               <ProjectImgOverlay>
                 <a href={project.project_url}>Live</a>
-                <a href={project.project_url}>Code</a>
+                <a href={project.github_url}>Code</a>
               </ProjectImgOverlay>
               <ProjectName>{project.name}</ProjectName>
               <ProjectCaption> {project.description} </ProjectCaption>
@@ -61,6 +61,11 @@ const Project = styled.div`
   &:hover {
     border-radius: 0px;
     transition: border-radius 0.3s ease;
+  }
+
+  a:hover {
+    background: #5691c8;
+    border: none;
   }
   @media screen and (min-width: 790px) {
     width: 45%;
