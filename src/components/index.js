@@ -95,7 +95,7 @@ export const PageTitle = styled.h1`
 export const Container = styled.section`
   min-height: ${props => (props.blog ? '100vh' : '')};
   padding: 5rem 0.75rem;
-  width: 100%;
+  width: auto;
   max-width: 960px;
   margin: 0 auto;
   font-size: 16px;

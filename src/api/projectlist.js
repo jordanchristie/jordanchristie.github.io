@@ -10,6 +10,7 @@ export const ProjectList = [
       'A full-stack MERN inspirational quotes app with passport authentication.',
     img_url: Inspiri,
     project_url: 'https://inspiri.herokuapp.com',
+    github_url: 'https://github.com/jordanchristie/inspiri',
   },
   {
     name: 'Jorsquare',
@@ -17,6 +18,7 @@ export const ProjectList = [
       'A React/Redux powered brewery search app using the Foursquare API.',
     img_url: Jorsquare,
     project_url: 'https://codesandbox.io/s/rl6qnl6jrn',
+    github_url: 'https://github.com/jordanchristie/jorsquare-search',
   },
   {
     name: `Mickey's House`,
@@ -24,6 +26,7 @@ export const ProjectList = [
       'A full-stack Walt Disney World search app for restaurants and attractions.',
     img_url: MickeysHouse,
     project_url: 'https://mickeys-house.now.sh',
+    github_url: 'https://github.com/jordanchristie/mickeys-house',
   },
   {
     name: 'GithubAPI',
