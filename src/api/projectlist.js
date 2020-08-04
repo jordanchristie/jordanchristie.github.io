@@ -17,7 +17,7 @@ export const ProjectList = [
     description:
       'A React/Redux powered brewery search app using the Foursquare API.',
     img_url: Jorsquare,
-    project_url: 'https://codesandbox.io/s/rl6qnl6jrn',
+    project_url: 'https://jorsquare-search.vercel.app',
     github_url: 'https://github.com/jordanchristie/jorsquare-search',
   },
   {
