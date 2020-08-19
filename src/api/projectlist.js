@@ -32,6 +32,7 @@ export const ProjectList = [
     name: 'GithubAPI',
     description: 'A simple Github search app with React.',
     img_url: GithubAPI,
-    project_url: 'https://github.com/jordanchristie/React-Github-Project',
+    project_url: 'https://react-github-project.vercel.app',
+    github_url: 'https://github.com/jordanchristie/React-Github-Project',
   },
 ]
